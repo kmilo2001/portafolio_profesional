@@ -1,0 +1,162 @@
+
+
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Variables de color ===== */
+:root {
+  --azul-claro:  #A7C7E7;
+  --gris-suave:  #F4F6F8;    /* para el fondo del body */
+  --verde-menta: #66fcf1;
+  --melocoton:   #c8e7f4;
+  --gris-oscuro: #333333;
+  --negro:       #000000;    /* nuevo para títulos */
+  --neon-cyan:   #f55ae3;
+}
+
+/* ===== Estilos globales ===== */
+body {
+  font-family:     'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--gris-suave);
+  color:            var(--gris-oscuro);
+  line-height:      1.6;
+  padding-top:      80px;  /* espacio para header fijo */
+}
+
+/* ===== Header fijo ===== */
+#encabezado {
+  position:        fixed;
+  top:             0; left: 0;
+  width:           100%;
+  background:      var(--azul-claro);
+  padding:         1rem 2rem;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  z-index:         1000;
+  box-shadow:      0 2px 8px rgba(0,0,0,0.1);
+}
+#encabezado .imagen img {
+  height:         50px;
+  cursor:         pointer;
+  transition:     transform 0.6s;
+}
+#encabezado .imagen img:hover {
+  transform:      rotate(360deg);
+}
+
+/* ===== Menú de navegación ===== */
+#menu ul {
+  display:        flex;
+  list-style:     none;
+}
+#menu ul li {
+  margin-left:    1.5rem;
+}
+#menu ul li a {
+  text-decoration: none;
+  color:           var(--gris-oscuro);
+  font-weight:     500;
+  padding:         0.5rem;
+  transition:      color 0.3s, text-shadow 0.3s;
+}
+#menu ul li a:hover {
+  color:           var(--verde-menta);
+  text-shadow:     0 0 6px var(--verde-menta);
+}
+
+
+/* ===== Contenedor principal ===== */
+#contenedor {
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* Animación de entrada */
+  animation: slideIn 1s ease-out;
+}
+
+#contenedor h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#contenedor img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--verde-menta);
+  margin-bottom: 1rem;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+#contenedor img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#contenedor h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--gris-oscuro);
+}
+
+#contenedor p {
+  font-size: 1rem;
+  color: var(--gris-oscuro);
+}
+
+/* ===== Secciones destacadas (tarjetas) ===== */
+.tarjeta {
+  background-color: var(--verde-menta);
+  padding: 1.1rem;
+  border-radius: 8px;
+  margin: 1.7rem 0;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Animaciones ===== */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  #encabezado {
+    flex-direction: column;
+  }
+  #menu ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  #menu ul li {
+    margin: 0.5rem 0;
+  }
+  #contenedor {
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+}

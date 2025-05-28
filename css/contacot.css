@@ -1,0 +1,120 @@
+/* stack.css */
+
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Variables de color ===== */
+:root {
+  --azul-claro:  #A7C7E7;
+  --gris-suave:  #F4F6F8;    /* para el fondo del body */
+  --verde-menta: #66fcf1;
+  --melocoton:   #c8e7f4;
+  --gris-oscuro: #333333;
+  --negro:       #000000;    /* nuevo para títulos */
+  --neon-cyan:   #f55ae3;
+}
+
+/* ===== Estilos globales ===== */
+body {
+  font-family:     'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--gris-suave);
+  color:            var(--gris-oscuro);
+  line-height:      1.6;
+  padding-top:      80px;  /* espacio para header fijo */
+}
+
+/* ===== Header fijo ===== */
+#encabezado {
+  position:        fixed;
+  top:             0; left: 0;
+  width:           100%;
+  background:      var(--azul-claro);
+  padding:         1rem 2rem;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  z-index:         1000;
+  box-shadow:      0 2px 8px rgba(0,0,0,0.1);
+}
+#encabezado .imagen img {
+  height:         50px;
+  cursor:         pointer;
+  transition:     transform 0.6s;
+}
+#encabezado .imagen img:hover {
+  transform:      rotate(360deg);
+}
+
+/* ===== Menú de navegación ===== */
+#menu ul {
+  display:        flex;
+  list-style:     none;
+}
+#menu ul li {
+  margin-left:    1.5rem;
+}
+#menu ul li a {
+  text-decoration: none;
+  color:           var(--gris-oscuro);
+  font-weight:     500;
+  padding:         0.5rem;
+  transition:      color 0.3s, text-shadow 0.3s;
+}
+#menu ul li a:hover {
+  color:           var(--verde-menta);
+  text-shadow:     0 0 6px var(--verde-menta);
+}
+
+/* ========= CONTENEDOR PRINCIPAL ========= */
+.contenedor{
+  max-width:600px;margin:2rem auto;padding:2rem 1.5rem;
+  background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+/* ========= FORMULARIO ========= */
+.formulario form{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.25rem}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea{
+  width:100%;padding:.85rem 1rem;
+  border:1.5px solid #d1d5db;border-radius:10px;
+  font-size:1rem;background:#f9fafb;resize:vertical;
+  transition:border-color .25s,box-shadow .25s;
+}
+.formulario textarea{min-height:120px}
+
+.formulario input:focus,
+.formulario textarea:focus{
+  border-color:var(--verde-menta);
+  box-shadow:0 0 0 4px #66fcf14d;background:#fff;
+}
+
+.formulario button{
+  align-self:flex-start;background:linear-gradient(135deg,var(--verde-menta),#4de3d8);
+  color:#fff;border:none;padding:.7rem 2rem;border-radius:10px;font-weight:700;cursor:pointer;
+  transition:transform .2s,box-shadow .25s;box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+.formulario button:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+
+/* ========= ÍCONOS SOCIALES ========= */
+#icono{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:.5rem}
+
+.iconos{
+  width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;
+  background:#fff;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,.08);
+  transition:transform .3s,box-shadow .3s;
+}
+.iconos img{width:17px;height:17px;filter:grayscale(60%);transition:filter .4s}
+.iconos:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.iconos:hover img{filter:none}
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:480px){
+  #menu ul{flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--azul-claro);padding:.75rem 1rem;display:none}
+  #menu.active ul{display:flex}
+}
