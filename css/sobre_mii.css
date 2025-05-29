@@ -139,3 +139,19 @@ display: flex;
 #contenedor{ 
  animation: zoomIn 0.8s ease-in-out;
 }
+
+.btn-descargar-cv {
+  display: inline-block;
+  background-color: var(--verde-menta);
+  color: var(--gris-oscuro);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-descargar-cv:hover {
+  background-color: var(--azul-claro);
+  transform: translateY(-2px);
+}
