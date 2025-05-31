@@ -1,0 +1,680 @@
+/* ==========================================================================
+   RESET BÁSICO Y VARIABLES
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores principales */
+  --azul-claro:     #A7C7E7;
+  --encabezado:     #bfd9f3;
+  --gris-suave:     #F4F6F8;
+  --gris-medio:     #abc4ea;
+  --gris-oscuro:    #333333;
+  --negro:          #000000;
+  --blanco:         #FFFFFF;
+  --verde-menta:    #66FCF1;
+  --melocotón:      #C8E7F4;
+  --accento:        #0077FF;
+
+  /* Tipografía */
+  --fuente-principal: 'Segoe UI', Tahoma, sans-serif;
+  --tamaño-base:      16px;
+
+  /* Espacios */
+  --espacio-pequeño:  0.5rem;
+  --espacio-mediano:  1rem;
+  --espacio-grande:   2rem;
+  --espacio-xl:       3rem;
+
+  /* Radios */
+  --radio-card:  0.5rem;
+}
+
+/* === Estilos Globales === */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  font-size: var(--tamaño-base);
+  line-height: 1.6;
+  color: var(--gris-oscuro);
+  background-color: var(--gris-suave);
+  min-height: 100vh;
+}
+
+/* Enlaces */
+a {
+  color: var(--accento);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--azul-claro);
+}
+
+/* Botones genéricos */
+button,
+button[type="submit"] {
+  background-color: var(--accento);
+  color: var(--blanco);
+  border: none;
+  padding: calc(var(--espacio-pequeño) + 2px) var(--espacio-mediano);
+  border-radius: var(--radio-card);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover,
+button[type="submit"]:hover {
+  background-color: var(--azul-claro);
+}
+
+/* Contenedores maestros para centrar */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--espacio-mediano);
+}
+
+/* Títulos genéricos */
+h1, h2, h3 {
+  color: var(--gris-oscuro);
+  margin-bottom: var(--espacio-pequeño);
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--espacio-grande);
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN PRINCIPAL
+   ========================================================================== */
+
+.site-header {
+  background-color: var(--blanco);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .logo img {
+  height: 50px;
+  display: block;
+}
+
+.navegacion-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--espacio-pequeño) 0;
+}
+
+.navegacion-principal ul {
+  list-style: none;
+  display: flex;
+  gap: var(--espacio-grande);
+}
+
+.navegacion-principal li a {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: var(--espacio-pequeño) var(--espacio-mediano);
+  border-radius: var(--radio-card);
+  transition: background-color 0.3s;
+}
+
+.navegacion-principal li a:hover {
+  background-color: var(--gris-medio);
+}
+
+/* ==========================================================================
+   SECCIÓN INICIO
+   ========================================================================== */
+
+#inicio {
+  background-color: var(--gris-suave);
+  padding: var(--espacio-xl) 0;
+}
+
+.contenedor-inicio {
+  text-align: center;
+}
+
+.contenedor-inicio h1 {
+  margin-bottom: var(--espacio-mediano);
+}
+
+.contenedor-inicio img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--espacio-mediano);
+}
+
+.contenedor-inicio h2 {
+  font-size: 2rem;
+  margin-bottom: var(--espacio-pequeño);
+}
+
+.contenedor-inicio h3 {
+  font-size: 1.2rem;
+  color: var(--gris-oscuro);
+  margin-bottom: var(--espacio-mediano);
+}
+
+.contenedor-inicio p {
+  font-size: 1rem;
+  color: var(--gris-oscuro);
+}
+
+/* ==========================================================================
+   SECCIÓN SOBRE MÍ
+   ========================================================================== */
+
+#sobre-mi {
+  background-color: var(--blanco);
+  padding: var(--espacio-xl) 0;
+}
+
+.sobre-mi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--espacio-grande);
+}
+
+.sobre-mi .texto {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.sobre-mi .texto h1 {
+  font-size: 2rem;
+  margin-bottom: var(--espacio-pequeño);
+  text-align: center;
+}
+
+.sobre-mi .texto p {
+  font-size: 1rem;
+  margin-bottom: var(--espacio-mediano);
+  text-align: justify;
+}
+
+.sobre-mi .texto .btn-descargar-cv {
+  display: inline-block;
+  background-color: var(--accento);
+  color: var(--blanco);
+  padding: var(--espacio-pequeño) var(--espacio-grande);
+  border-radius: var(--radio-card);
+  font-weight: 500;
+  margin-top: var(--espacio-pequeño);
+  transition: background-color 0.3s;
+}
+.sobre-mi .texto .btn-descargar-cv:hover {
+  background-color: var(--azul-claro);
+}
+
+.sobre-mi .foto {
+  flex: 0 1 250px;
+  text-align: center;
+}
+.sobre-mi .foto img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gris-medio);
+}
+
+/* ==========================================================================
+   SECCIÓN PROYECTOS
+   ========================================================================== */
+
+#proyectos {
+  background-color: var(--gris-suave);
+  padding: var(--espacio-xl) 0;
+  text-align: center;
+}
+
+#proyectos h1 {
+  margin-bottom: var(--espacio-grande);
+}
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--espacio-grande);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.proyecto {
+  background-color: var(--blanco);
+  border-radius: var(--radio-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.proyecto:hover {
+  transform: translateY(-4px);
+}
+
+.proyecto header {
+  padding: var(--espacio-mediano);
+  border-bottom: 1px solid var(--gris-medio);
+  position: relative;
+}
+
+.proyecto header h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--espacio-pequeño);
+}
+
+.proyecto .metadatos {
+  font-size: 0.9rem;
+  color: var(--gris-oscuro);
+}
+
+.proyecto header .toggle-info {
+  position: absolute;
+  top: var(--espacio-pequeño);
+  right: var(--espacio-pequeño);
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--accento);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.proyecto header .toggle-info .icono {
+  transition: transform 0.3s;
+}
+.proyecto header .toggle-info[aria-expanded="true"] .icono {
+  transform: rotate(180deg);
+}
+
+/* Media (imagen o video) */
+.proyecto figure {
+  margin: 0;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.proyecto figure img,
+.proyecto figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.proyecto figure figcaption {
+  display: none;
+}
+
+/* Descripción y tecnología (ocultas por defecto si toggle) */
+.proyecto .descripcion,
+.proyecto .tecnologias {
+  padding: var(--espacio-mediano);
+  display: none;
+}
+.proyecto .descripcion h3,
+.proyecto .tecnologias h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--espacio-pequeño);
+}
+.proyecto .descripcion p,
+.proyecto .tecnologias ul {
+  font-size: 0.95rem;
+}
+.proyecto .tecnologias ul {
+  list-style: disc inside;
+  margin-left: var(--espacio-mediano);
+}
+
+/* Pie de proyecto (enlace) */
+.proyecto .pie-proyecto {
+  margin-top: auto;
+  padding: var(--espacio-mediano);
+  border-top: 1px solid var(--gris-medio);
+  text-align: right;
+}
+.proyecto .pie-proyecto a {
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   SECCIÓN FORMACIÓN (Educación + Certificados)
+   ========================================================================== */
+
+#formacion {
+  background-color: var(--blanco);
+  padding: var(--espacio-xl) 0;
+  text-align: center;
+}
+
+#formacion h1 {
+  margin-bottom: var(--espacio-grande);
+}
+
+/* Agrupador general */
+.formacion .contenedor-formacion {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacio-grande);
+  align-items: start;
+}
+
+/* Bloque Educaciones y Certificados */
+.educaciones,
+.certificados {
+  background-color: var(--gris-suave);
+  border-radius: var(--radio-card);
+  padding: var(--espacio-grande);
+}
+
+.educaciones h2,
+.certificados h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--espacio-mediano);
+}
+
+/* Lista de items (cards) */
+.item-educacion,
+.item-certificado {
+  background-color: var(--blanco);
+  border-radius: var(--radio-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: var(--espacio-mediano);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.item-educacion:hover,
+.item-certificado:hover {
+  transform: translateY(-2px);
+}
+
+.item-educacion img,
+.item-certificado img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: var(--espacio-mediano);
+  border-radius: 8px;
+}
+
+.item-educacion div,
+.item-certificado div {
+  flex: 1;
+  text-align: left;
+  padding-right: var(--espacio-mediano);
+}
+
+.item-educacion h3,
+.item-certificado h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--espacio-pequeño);
+}
+
+.item-educacion p,
+.item-certificado p {
+  font-size: 0.95rem;
+  color: var(--gris-oscuro);
+  margin-bottom: var(--espacio-pequeño);
+}
+
+.item-certificado a {
+  display: inline-block;
+  margin-top: var(--espacio-pequeño);
+  font-weight: 500;
+  color: var(--accento);
+}
+.item-certificado a:hover {
+  color: var(--azul-claro);
+}
+
+/* ==========================================================================
+   SECCIÓN STACK TECNOLÓGICO
+   ========================================================================== */
+
+#stack {
+  background-color: var(--gris-suave);
+  padding: var(--espacio-xl) 0;
+}
+
+#stack h1 {
+  margin-bottom: var(--espacio-grande);
+  text-align: center;
+}
+
+/* Contenedor principal dividido */
+#stack #contendor_principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-grande);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Lista de habilidades */
+#stack #habilidades {
+  flex: 1 1 350px;
+  background-color: var(--blanco);
+  border-radius: var(--radio-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: var(--espacio-grande);
+}
+
+#stack #habilidades h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--espacio-pequeño);
+}
+
+#stack #habilidades ul {
+  list-style: disc inside;
+  margin-left: var(--espacio-pequeño);
+  margin-bottom: var(--espacio-mediano);
+}
+#stack #habilidades ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Íconos de herramientas */
+#stack #icono {
+  flex: 1 1 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-mediano);
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blanco);
+  border-radius: var(--radio-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: var(--espacio-grande);
+}
+
+#stack #icono .iconos {
+  width: 60px;
+  height: 60px;
+  padding: var(--espacio-pequeño);
+  background-color: var(--gris-medio);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#stack #icono .iconos img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+#stack #icono .iconos:hover {
+  background-color: var(--verde-menta);
+}
+
+/* ==========================================================================
+   SECCIÓN CONTACTO
+   ========================================================================== */
+
+#contacto {
+  background-color: var(--blanco);
+  padding: var(--espacio-xl) 0;
+  text-align: center;
+}
+
+#contacto h1 {
+  font-size: 2rem;
+  margin-bottom: var(--espacio-grande);
+}
+
+/* Contenedor de formulario e íconos */
+#contacto .contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-grande);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Formulario de contacto */
+#contacto .formulario {
+  flex: 1 1 350px;
+  background-color: var(--gris-suave);
+  border-radius: var(--radio-card);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: var(--espacio-grande);
+}
+
+#contacto .formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-mediano);
+}
+
+#contacto .formulario input,
+#contacto .formulario textarea {
+  width: 100%;
+  padding: var(--espacio-pequeño);
+  border: 1px solid var(--gris-medio);
+  border-radius: var(--radio-card);
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#contacto .formulario button {
+  align-self: flex-end;
+}
+
+/* Íconos sociales */
+#contacto #icono {
+  flex: 0 1 150px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-mediano);
+  justify-content: center;
+  align-items: center;
+}
+
+#contacto #icono .iconos {
+  width: 50px;
+  height: 50px;
+  padding: var(--espacio-pequeño);
+  background-color: var(--gris-medio);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+#contacto #icono .iconos img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+#contacto #icono .iconos:hover {
+  background-color: var(--verde-menta);
+}
+
+/* ==========================================================================
+   UTILIDADES Y MEDIA QUERIES
+   ========================================================================== */
+
+/* Para mostrar/ocultar secciones de cada proyecto mediante JS
+   (asumiendo que el script añade/quita la clase "mostrar" o modifica aria-expanded) */
+.proyecto[aria-expanded="true"] .descripcion,
+.proyecto[aria-expanded="true"] .tecnologias {
+  display: block;
+}
+
+/* Centrar texto genérico */
+.text-center {
+  text-align: center;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+
+  /* Header nav responsivo */
+  .navegacion-principal ul {
+    flex-wrap: wrap;
+    gap: var(--espacio-mediano);
+  }
+
+  /* Sobre mí: apilar columnas */
+  .sobre-mi {
+    flex-direction: column;
+  }
+
+  /* Proyectos: 1 columna */
+  .proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Formación: columnas apiladas */
+  .formacion .contenedor-formacion {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack: apilar tablas de habilidades e íconos */
+  #stack #contendor_principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contacto: apilar formulario e íconos */
+  #contacto .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+}

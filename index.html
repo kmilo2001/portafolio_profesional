@@ -1,36 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="./css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Camilo Andrés Ortiz</title>
 
+  <!-- Enlace al CSS unificado -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header id="encabezado">
-        <div class="imagen"> <img src="./imagenes/logo2.png" alt="logo"></div>
-        <nav id="menu">
-            <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="./html/sobre_mi.html">Sobre mí</a></li>
-            <li><a href="./html/proyectos.html">Proyectos</a></li>
-            <li><a href="./html/Desarrollo_pro.html">Formacion</a></li>
-            <li><a href="./html/stack.html">Stack tecnológico</a></li>
-            <li><a href="./html/contacto.html">Contáctame</a></li>
-         
-            </ul>
-        </nav>
-    </header>
-    <div id="contenedor">
-        <h1>¡Bienvenido a mi portafolio! Aquí transformo ideas en soluciones.</h1>
-        <img src="./imagenes/fotoperfilcamilopng.png" alt="foto">
-        <h2>Camilo Andres Ortiz Regalado</h2>
-        <h3>Ingeniero de sistemas</h3>
-        <p>Desarrollo / Analisis de datos/ Ciencia de datos</p>
-    </div>
 
-    <script src="./js/index.js"></script>
-    
+  <!-- ================= HEADER y NAVEGACIÓN PRINCIPAL ================= -->
+  <header id="encabezado" class="site-header">
+    <div class="logo container">
+      <a href="#inicio">
+        <img src="imagenes/logo2.png" alt="Logo personal" />
+      </a>
+    </div>
+    <nav class="navegacion-principal container">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#stack">Stack Tecnológico</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ================= SECCIÓN INICIO ================= -->
+  <section id="inicio">
+    <div class="container contenedor-inicio">
+      <h1>¡Bienvenido a mi portafolio! Aquí transformo ideas en soluciones.</h1>
+      <img src="imagenes/fotoperfilcamilopng.png" alt="Foto de Camilo" />
+      <h2>Camilo Andrés Ortiz Regalado</h2>
+      <h3>Ingeniero de Sistemas</h3>
+      <p>Desarrollo / Análisis de datos / Ciencia de datos</p>
+    </div>
+  </section>
+
+
+  <!-- ================= SECCIÓN SOBRE MÍ ================= -->
+  <section id="sobre-mi">
+    <div class="container sobre-mi">
+      <div class="texto">
+        <h1>Mi Perfil</h1>
+        <p>
+          Soy estudiante de Ingeniería de Sistemas, actualmente en proceso de graduación. Gracias al enfoque integral de la carrera,
+          cuento con conocimientos en diversas áreas, aunque me he especializado en Ciencia de Datos, donde he llevado a cabo análisis
+          descriptivo, exploratorio y predictivo. Además, tengo experiencia en el diseño y gestión de bases de datos relacionales y en la
+          construcción de bodegas de datos. En el ámbito del desarrollo, he trabajado tanto en aplicaciones de escritorio como en proyectos
+          web front-end, empleando el patrón Modelo-Vista-Controlador. Mi objetivo es diseñar soluciones tecnológicas que resuelvan problemas
+          concretos, aplicando y ampliando constantemente mis aprendizajes.
+        </p>
+        <a href="pdf/cv_CamiloOrtiz.pdf" download class="btn-descargar-cv">Descargar hoja de vida</a>
+      </div>
+      <div class="foto">
+        <img src="imagenes/camilosm.png" alt="Foto de Camilo" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECCIÓN PROYECTOS ================= -->
+  <section id="proyectos">
+    <div class="container">
+      <h1>Proyectos Destacados</h1>
+      <div class="proyectos">
+
+        <!-- Proyecto 1: Portafolio Personal -->
+        <article class="proyecto" aria-expanded="false">
+          <header>
+            <h2>Portafolio Personal</h2>
+            <p class="metadatos">
+              Fecha: <time datetime="2025-05">Mayo 2025</time>
+            </p>
+            <button class="toggle-info" aria-expanded="false">
+              <span class="texto">Mostrar detalles</span>
+              <span class="icono">▼</span>
+            </button>
+          </header>
+          <figure>
+            <video controls>
+              <source src="videos/op1.mp4" type="video/mp4" />
+              Tu navegador no soporta la etiqueta <code>&lt;video&gt;</code>.
+            </video>
+          </figure>
+          <section class="descripcion">
+            <h3>Descripción</h3>
+            <p>
+              Este portafolio personal centraliza y organiza toda la información de mis proyectos laborales y personales.
+              Documenta experiencias, logros, habilidades aplicadas y tecnologías utilizadas, ofreciendo una visión estructurada
+              de mi crecimiento profesional. Ideal para seguimiento, presentación ante reclutadores y mejora continua.
+            </p>
+          </section>
+          <section class="tecnologias">
+            <h3>Tecnologías</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+          </section>
+          <footer class="pie-proyecto">
+            <a href="https://cursos.desafiolatam.com/certificates/f8yidyhmhi" target="_blank" rel="noopener">
+              Ver certificado
+            </a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 2: Análisis de Datos (CRISP-DM) -->
+        <article class="proyecto" aria-expanded="false">
+          <header>
+            <h2>Análisis de Datos (Proyecto CRISP-DM)</h2>
+            <p class="metadatos">
+              Fecha: <time datetime="2025-04">Abril 2025</time>
+            </p>
+            <button class="toggle-info" aria-expanded="false">
+              <span class="texto">Mostrar detalles</span>
+              <span class="icono">▼</span>
+            </button>
+          </header>
+          <figure>
+            <img src="imagenes/analisis_ejemplo.png" alt="Ejemplo de Análisis de Datos" />
+          </figure>
+          <section class="descripcion">
+            <h3>Descripción</h3>
+            <p>
+              Proyecto de limpieza y análisis de datos de accidentes de tráfico siguiendo la metodología CRISP-DM. Incluye preprocesamiento,
+              análisis exploratorio y modelado predictivo para identificar factores de riesgo que permitan reducir incidentes.
+            </p>
+          </section>
+          <section class="tecnologias">
+            <h3>Tecnologías</h3>
+            <ul>
+              <li>Python (Pandas, NumPy, Matplotlib)</li>
+              <li>Jupyter Notebook</li>
+              <li>SQL para extracción de datos</li>
+            </ul>
+          </section>
+          <footer class="pie-proyecto">
+            <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
+          </footer>
+        </article>
+
+        <!-- Proyecto 3: Ciencia de Datos (Modelo de Predicción) -->
+        <article class="proyecto" aria-expanded="false">
+          <header>
+            <h2>Ciencia de Datos (Modelo de Predicción)</h2>
+            <p class="metadatos">
+              Fecha: <time datetime="2025-05">Mayo 2025</time>
+            </p>
+            <button class="toggle-info" aria-expanded="false">
+              <span class="texto">Mostrar detalles</span>
+              <span class="icono">▼</span>
+            </button>
+          </header>
+          <figure>
+            <img src="imagenes/modelo_prediccion.png" alt="Modelo de Predicción" />
+          </figure>
+          <section class="descripcion">
+            <h3>Descripción</h3>
+            <p>
+              Desarrollo de un modelo híbrido (GRU + XGBoost) para predecir la demanda de medicamentos en un entorno hospitalario.
+              Incluye extracción de características, validación cruzada y ajustes de hiperparámetros para optimizar el desempeño.
+            </p>
+          </section>
+          <section class="tecnologias">
+            <h3>Tecnologías</h3>
+            <ul>
+              <li>Python (TensorFlow, XGBoost)</li>
+              <li>Jupyter Notebook</li>
+              <li>PostgreSQL para manejo de base de datos</li>
+            </ul>
+          </section>
+          <footer class="pie-proyecto">
+            <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECCIÓN FORMACIÓN ================= -->
+  <section id="formacion">
+    <div class="container">
+      <h1>Formación Académica y Certificaciones</h1>
+      <div class="contenedor-formacion">
+
+        <!-- Bloque EDUCACIONES -->
+        <div class="educaciones">
+          <h2>Educación</h2>
+
+          <!-- Item Educación 1 -->
+          <div class="item-educacion">
+            <img src="imagenes/unimag.png" alt="Unimagdalena" />
+            <div>
+              <h3>Ingeniería de Sistemas</h3>
+              <p>Universidad del Magdalena</p>
+              <p>Inicio: 07/2019 – Presente</p>
+            </div>
+          </div>
+
+          <!-- Item Educación 2 -->
+          <div class="item-educacion">
+            <img src="imagenes/masameca.png" alt="I.E.T.D Manuel Salvador Meza Camargo" />
+            <div>
+              <h3>Bachiller Técnico</h3>
+              <p>I.E.T.D Manuel Salvador Meza Camargo</p>
+              <p>02/2013 – 12/2018</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bloque CERTIFICADOS (Cursos Cortos) -->
+        <div class="certificados">
+          <h2>Cursos Cortos y Certificaciones</h2>
+
+          <!-- Curso / Certificado 1 -->
+          <div class="item-certificado">
+            <img src="imagenes/desafio_latam.png" alt="Desafío Latam" />
+            <div>
+              <h3>Introducción al Análisis de Datos con Python</h3>
+              <p>Plataforma: Desafío Latam</p>
+              <p>05/2025</p>
+              <a href="https://cursos.desafiolatam.com/certificates/f8yidyhmhi" target="_blank" rel="noopener">
+                Ver certificado
+              </a>
+            </div>
+          </div>
+
+          <!-- Curso / Certificado 2 -->
+          <div class="item-certificado">
+            <img src="imagenes/udemy.png" alt="Udemy" />
+            <div>
+              <h3>Microsoft Excel: De Principiante a Avanzado</h3>
+              <p>Plataforma: Udemy</p>
+              <p>10/2024 – 11/2024</p>
+              <a href="https://ude.my/UC-60c28a0d-e98b-4ad3-97bb-3e9a3dd8fbae" target="_blank" rel="noopener">
+                Ver certificado
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SECCIÓN STACK TECNOLÓGICO ================= -->
+  <section id="stack">
+    <div class="container">
+      <h1>Stack Tecnológico</h1>
+      <div id="contendor_principal">
+
+        <!-- Lista de Habilidades -->
+        <section id="habilidades">
+          <h2>Habilidades Técnicas</h2>
+          <ul>
+            <li>Programación en Python y JavaScript</li>
+            <li>Diseño web front-end (HTML, CSS)</li>
+            <li>Análisis de datos: exploratorio, descriptivo y predictivo</li>
+            <li>Machine Learning</li>
+            <li>Visualización y storytelling con gráficos</li>
+            <li>Gestión de bases de datos y bodegas de datos</li>
+          </ul>
+
+          <h2>Habilidades Blandas</h2>
+          <ul>
+            <li>Pensamiento analítico y resolución de problemas</li>
+            <li>Comunicación efectiva</li>
+            <li>Trabajo colaborativo</li>
+            <li>Organización y gestión del tiempo</li>
+            <li>Adaptabilidad y aprendizaje continuo</li>
+          </ul>
+        </section>
+
+        <!-- Íconos de Herramientas -->
+        <aside id="icono">
+          <div class="iconos">
+            <img src="imagenes/piton_icono.png" alt="Python" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/javascript_icono.png" alt="JavaScript" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/css_icono.png" alt="CSS" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/html_icono.png" alt="HTML" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/sql_ocono.png" alt="SQL" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/ia_icono.png" alt="Inteligencia Artificial" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/git_icon.png" alt="Git" />
+          </div>
+          <div class="iconos">
+            <img src="imagenes/bd.icon.png" alt="Bases de Datos" />
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= SECCIÓN CONTACTO ================= -->
+  <section id="contacto">
+    <div class="container">
+      <h1>Contáctame</h1>
+      <div class="contenedor">
+
+        <!-- Formulario de Contacto -->
+        <div class="formulario">
+          <form action="https://formsubmit.co/camiloortizar@gmail.com" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="correo" placeholder="Tu correo" required />
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Íconos Sociales -->
+        <div id="icono">
+          <div class="iconos">
+            <a href="https://wa.me/573160948317?text=Hola%20quiero%20contactarte%20desde%20tu%20portafolio">
+              <img src="imagenes/whatsapp_icon.png" alt="WhatsApp" />
+            </a>
+          </div>
+          <div class="iconos">
+            <a href="https://www.linkedin.com/in/camilo-ortiz-53966b358/">
+              <img src="imagenes/linkedin_icon.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="./js/main.js" defer></script>
+
+
 </body>
 </html>
